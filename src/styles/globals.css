@@ -31,17 +31,33 @@
 }
 
 @font-face {
-    font-family: Xanh Mono;
-    src: url('../fonts/XanhMono-Regular.ttf');
-    font-weight: 400;
+    font-family: Cormorant Garamond;
+    src: url('../fonts/CormorantGaramond-VariableFont_wght.ttf');
+    font-weight: 300 700;
     font-style: normal;
     font-display: block;
 }
 
 @font-face {
-    font-family: Xanh Mono;
-    src: url('../fonts/XanhMono-Italic.ttf');
-    font-weight: 400;
+    font-family: Cormorant Garamond;
+    src: url('../fonts/CormorantGaramond-Italic-VariableFont_wght.ttf');
+    font-weight: 300 700;
+    font-style: italic;
+    font-display: block;
+}
+
+@font-face {
+    font-family: Work Sans;
+    src: url('../fonts/WorkSans-VariableFont_wght.ttf');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: Work Sans;
+    src: url('../fonts/WorkSans-Italic-VariableFont_wght.ttf');
+    font-weight: 100 900;
     font-style: italic;
     font-display: block;
 }
@@ -62,7 +78,7 @@ body {
     margin: auto;
     min-height: 100vh;
     padding: 3em 1em;
-    font-family: "Nimbus Mono", monospace;
+    font-family: "Work Sans", sans-serif;
     font-weight: 400;
     font-style: normal;
     /* fall back color */
@@ -118,7 +134,7 @@ h3 {
     font-style: normal;
     overflow-wrap: break-word;
     word-wrap: break-word;
-    font-family: "Xanh Mono", monospace;
+    font-family: "Cormorant Garamond", serif;
 }
 
 h1 {
@@ -223,7 +239,7 @@ a:not([href*='//']):visited {
     /* to keep the padding consistent for line breaks: */
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
-    font-family: "Xanh Mono", monospace;
+    font-family: "Cormorant Garamond", serif;
 
     &:hover,
     &:active {
