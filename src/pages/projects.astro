@@ -2,6 +2,8 @@
 import "../styles/globals.css";
 import Filter from "../components/filter.astro";
 const pageTitle = "Projects";
+import Navigation from "../components/navigation.astro";
+import Footer from "../components/footer.astro";
 ---
 
 <html lang="en">
@@ -13,11 +15,12 @@ const pageTitle = "Projects";
         <title>{pageTitle}</title>
     </head>
     <body>
-        <!-- <Filter /> -->
+        <Navigation />
         <main class="main-card"> 
             <Filter />
             <h1>{pageTitle}</h1>
             <p>Explore my projects <a href="www.google.com"> here</a></p>
         </main>
+        <Footer />
     </body>
 </html>
