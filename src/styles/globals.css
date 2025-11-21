@@ -60,11 +60,29 @@ body {
     font-size: 12pt;
     max-width: 45em;
     margin: auto;
+    min-height: 100vh;
     padding: 3em 1em;
     font-family: "Nimbus Mono", monospace;
     font-weight: 400;
     font-style: normal;
+    /* fall back color */
+    background-color: #d2b54c;
+    /* gold texture */
+    background-image: url('../images/gold-texture.svg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
+
+/* White card for content */
+.main-card {
+    max-width: 700px;
+    margin: 4rem auto;
+    padding: 3rem;
+    background: #fdfaf3;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  }
 
 @media (pointer: fine) and (hover: hover) {
     @supports (not (-webkit-hyphens: none)) {
