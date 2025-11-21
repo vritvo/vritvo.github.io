@@ -68,7 +68,7 @@ body {
     /* fall back color */
     background-color: #d2b54c;
     /* gold texture */
-    background-image: url('../images/gold-texture.svg');
+    background-image: url('/gold-texture.svg');
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
