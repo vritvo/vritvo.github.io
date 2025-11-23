@@ -107,24 +107,20 @@ body {
     @supports (not (-webkit-hyphens: none)) {
 
         @media (min-resolution: 1dppx) {
-            body {
-                filter: url('#xerox-effect-body-lowres');
-            }
-
             h1,
-            h2 {
-                filter: url('#xerox-effect-headings-lowres');
+            h2,
+            h3,
+            h4 {
+                filter: url('#xerox-effect-body-lowres');
             }
         }
 
         @media (min-resolution: 2dppx) {
-            body {
-                filter: url('#xerox-effect-body-highres');
-            }
-
             h1,
-            h2 {
-                filter: url('#xerox-effect-headings-highres');
+            h2,
+            h3,
+            h4 {
+                filter: url('#xerox-effect-body-highres');
             }
         }
     }
