@@ -63,7 +63,7 @@
 }
 
 :root {
-    --color-yellow: #d2b54c;
+    --color-yellow: #d7cfae;
     --line-thickness: 2pt;
 }
 
@@ -82,17 +82,18 @@ body {
     font-weight: 400;
     font-style: normal;
     /* fall back color */
-    background-color: #d2b54c;
+    background-color: #d7cfae;
     /* gold texture */
     /* background-image: url('/gold-texture.svg');
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed; */
-    background-image: url('/neuron_background.png');
+    background-image: url('/neuron_background2.png');
     background-blend-mode: multiply;
-    background-size: cover;
-    background-attachment: fixed;
+    /* repeat*/ 
+    background-repeat: repeat; 
+    background-size: 500px 500px;
 }
 
 /* White card for content */
@@ -134,7 +135,7 @@ h3 {
     font-style: normal;
     overflow-wrap: break-word;
     word-wrap: break-word;
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Cormorant Garamond;", serif;
 }
 
 h1 {
