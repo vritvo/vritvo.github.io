@@ -63,7 +63,7 @@
 }
 
 :root {
-    --color-yellow: #d2b54c;
+    --color-yellow: #b8ae8f;
     --line-thickness: 2pt;
 }
 
@@ -143,18 +143,21 @@ h1 {
     line-height: 48pt;
     margin: 128pt 0 72pt 0;
     text-align: center;
+    font-weight: 300;
 }
 
 h2 {
     font-size: 36pt;
     line-height: 36pt;
     margin: 72pt 0 24pt 0;
+    font-weight:300;
 }
 
 h3 {
     font-size: 24pt;
     line-height: 24pt;
     margin: 48pt 0 24pt 0;
+    font-weight: 300;
 }
 
 h3::after {
