@@ -1,34 +1,115 @@
 @font-face {
-    font-family: Nimbus Mono;
-    src: url('../fonts/NimbusMono-Regular.otf');
+    font-family: Spectral;
+    src: url('../fonts/Spectral-ExtraLight.ttf');
+    font-weight: 200;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: Spectral;
+    src: url('../fonts/Spectral-ExtraLightItalic.ttf');
+    font-weight: 200;
+    font-style: italic;
+    font-display: block;
+}
+
+@font-face {
+    font-family: Spectral;
+    src: url('../fonts/Spectral-Light.ttf');
+    font-weight: 300;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: Spectral;
+    src: url('../fonts/Spectral-LightItalic.ttf');
+    font-weight: 300;
+    font-style: italic;
+    font-display: block;
+}
+
+@font-face {
+    font-family: Spectral;
+    src: url('../fonts/Spectral-Regular.ttf');
     font-weight: 400;
     font-style: normal;
     font-display: block;
 }
 
 @font-face {
-    font-family: Nimbus Mono;
-    src: url('../fonts/NimbusMono-Oblique.otf');
+    font-family: Spectral;
+    src: url('../fonts/Spectral-Italic.ttf');
     font-weight: 400;
     font-style: italic;
     font-display: block;
 }
 
 @font-face {
-    font-family: Nimbus Mono;
-    src: url('../fonts/NimbusMono-Bold.otf');
-    font-weight: 900;
+    font-family: Spectral;
+    src: url('../fonts/Spectral-Medium.ttf');
+    font-weight: 500;
     font-style: normal;
     font-display: block;
 }
 
 @font-face {
-    font-family: Nimbus Mono;
-    src: url('../fonts/NimbusMono-BoldOblique.otf');
-    font-weight: 900;
+    font-family: Spectral;
+    src: url('../fonts/Spectral-MediumItalic.ttf');
+    font-weight: 500;
     font-style: italic;
     font-display: block;
 }
+
+@font-face {
+    font-family: Spectral;
+    src: url('../fonts/Spectral-SemiBold.ttf');
+    font-weight: 600;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: Spectral;
+    src: url('../fonts/Spectral-SemiBoldItalic.ttf');
+    font-weight: 600;
+    font-style: italic;
+    font-display: block;
+}
+
+@font-face {
+    font-family: Spectral;
+    src: url('../fonts/Spectral-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: Spectral;
+    src: url('../fonts/Spectral-BoldItalic.ttf');
+    font-weight: 700;
+    font-style: italic;
+    font-display: block;
+}
+
+@font-face {
+    font-family: Spectral;
+    src: url('../fonts/Spectral-ExtraBold.ttf');
+    font-weight: 800;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: Spectral;
+    src: url('../fonts/Spectral-ExtraBoldItalic.ttf');
+    font-weight: 800;
+    font-style: italic;
+    font-display: block;
+}
+
 
 @font-face {
     font-family: Cormorant Garamond;
@@ -135,13 +216,13 @@ h3 {
     font-style: normal;
     overflow-wrap: break-word;
     word-wrap: break-word;
-    font-family: "Cormorant Garamond;", serif;
+    font-family: "Spectral", serif;
 }
 
 h1 {
     font-size: 48pt;
-    line-height: 48pt;
-    margin: 128pt 0 72pt 0;
+    line-height: 48ipt;
+    margin: 64pt 0 36pt 0;
     text-align: center;
     font-weight: 300;
 }
@@ -244,7 +325,7 @@ a:not([href*='//']):visited {
     /* to keep the padding consistent for line breaks: */
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Spectral", serif;
     border: var(--line-thickness) solid var(--color-yellow);
 
     &:hover,
@@ -311,4 +392,6 @@ img {
 .splitter {
     color: var(--color-yellow);
     text-align: center;
+    /* shrink font size to 12pt */
+    font-size: 12pt;
 }
