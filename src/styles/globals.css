@@ -63,7 +63,7 @@
 }
 
 :root {
-    --color-yellow: #d7cfae;
+    --color-yellow: #d2b54c;
     --line-thickness: 2pt;
 }
 
@@ -82,18 +82,18 @@ body {
     font-weight: 400;
     font-style: normal;
     /* fall back color */
-    background-color: #d7cfae;
+    background-color: #FFFFFF;
     /* gold texture */
     /* background-image: url('/gold-texture.svg');
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed; */
-    background-image: url('/neuron_background2.png');
+    background-image: url('/grainy_paper.png');
     background-blend-mode: multiply;
     /* repeat*/ 
-    background-repeat: repeat; 
-    background-size: 500px 500px;
+    background-repeat: cover; 
+    background-size: cover;
 }
 
 /* White card for content */
@@ -101,7 +101,7 @@ body {
     max-width: 700px;
     margin: 4rem auto;
     padding: 3rem;
-    background: #fdfaf3;
+    background: #FFFFFF;
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
   }
 
@@ -142,6 +142,7 @@ h1 {
     font-size: 48pt;
     line-height: 48pt;
     margin: 128pt 0 72pt 0;
+    text-align: center;
 }
 
 h2 {
@@ -234,13 +235,14 @@ a:visited {
 a:not([href*='//']),
 a:not([href*='//']):visited {
     text-decoration: none;
-    background-color: black;
-    color: #ddd;
+    background-color: transparent;
+    color: black;
     padding: 4pt;
     /* to keep the padding consistent for line breaks: */
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
     font-family: "Cormorant Garamond", serif;
+    border: var(--line-thickness) solid var(--color-yellow);
 
     &:hover,
     &:active {
@@ -254,6 +256,7 @@ a[href*='//']:visited {
     padding: 4pt 0;
     text-decoration-thickness: var(--line-thickness);
     text-underline-offset: 4pt;
+    text-decoration-color: var(--color-yellow);
 
     &:hover,
     &:active {
@@ -300,4 +303,9 @@ img {
 .review-item a {
     display: inline-block;
     padding: 4pt;
+}
+
+.splitter {
+    color: var(--color-yellow);
+    text-align: center;
 }

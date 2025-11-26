@@ -5,7 +5,7 @@ import Navigation from "../components/navigation.astro";
 import Footer from "../components/footer.astro";
 const pageTitle = "Home Page";
 import { Content } from './web_pages/home.md';
-
+import Splitter from "../components/splitter.astro";
 ---
 
 <html lang="en">
@@ -23,8 +23,9 @@ import { Content } from './web_pages/home.md';
 	<body>
 		<Navigation />
 		<main class="main-card">
-			<Filter />
-			<h1>{pageTitle}</h1>
+			<!-- <Filter /> -->
+			<h1>Hi! I'm Victoria</h1>
+			<Splitter />			
 			<Content />
 		</main>
 		<Footer />
