@@ -145,11 +145,11 @@
 
 :root {
     --color-text: #1F1F1F;
-    --color-card: #FAFAFA;
-    --color-background: #E4E2DC;
-    --color-accent: #B3A781;
-    --color-secondary: #5E646A;
-    --color-yellow: #B8AE8F; /* keeping for backwards compatibility */
+    --color-card: #fafaf8;
+    --color-background: #F2F2EE;
+    --color-accent: #b8ae8f;
+    --color-accent-line: #6D7564;
+    --color-hover: #b8ae8f;
     --line-thickness: 2pt;
 }
 
@@ -179,29 +179,6 @@ body {
     background: var(--color-card);
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
   }
-
-@media (pointer: fine) and (hover: hover) {
-    @supports (not (-webkit-hyphens: none)) {
-
-        @media (min-resolution: 1dppx) {
-            h1,
-            h2,
-            h3,
-            h4 {
-                filter: url('#xerox-effect-body-lowres');
-            }
-        }
-
-        @media (min-resolution: 2dppx) {
-            h1,
-            h2,
-            h3,
-            h4 {
-                filter: url('#xerox-effect-body-highres');
-            }
-        }
-    }
-}
 
 h1,
 h2,
@@ -240,7 +217,7 @@ h3::after {
     flex: 1;
     margin-left: 1rem;
     height: var(--line-thickness);
-    background-color: var(--color-text);
+    background-color: var(--color-accent-line);
 }
 
 h2,
@@ -302,7 +279,7 @@ blockquote {
 footer {
     margin: 48pt 0 24pt 0;
     font-style: italic;
-    color: var(--color-secondary);
+    color: var(--color-accent-line);
 }
 
 a,
@@ -324,8 +301,8 @@ a:not([href*='//']):visited {
 
     &:hover,
     &:active {
-        background-color: var(--color-secondary);
-        color: var(--color-card);
+        background-color: var(--color-hover);
+        color: var(--color-text);
     }
 }
 
@@ -339,8 +316,8 @@ a[href*='//']:visited {
     &:hover,
     &:active {
         text-decoration: none;
-        color: var(--color-card);
-        background-color: var(--color-secondary);
+        color: var(--color-text);
+        background-color: var(--color-hover);
     }
 }
 
@@ -349,42 +326,8 @@ img {
     border: var(--line-thickness) solid var(--color-text);
 }
 
-.decision {
-    margin-left: 6pt;
-}
-
-.links {
-    display: flex;
-    flex-direction: column;
-    gap: 4pt;
-    align-items: flex-start;
-}
-
-.links a,
-.review-item a {
-    line-height: normal;
-}
-
-.btn {
-    display: inline-block;
-    padding: 4pt;
-}
-
-.review-item {
-    margin-bottom: 4pt;
-    background: none;
-    padding: 0;
-    border-radius: 0;
-    border-left: none;
-}
-
-.review-item a {
-    display: inline-block;
-    padding: 4pt;
-}
-
 .splitter {
-    color: var(--color-secondary);
+    color: var(--color-accent-line);
     text-align: center;
     /* shrink font size to 12pt */
     font-size: 12pt;
