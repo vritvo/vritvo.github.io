@@ -144,7 +144,12 @@
 }
 
 :root {
-    --color-yellow: #b8ae8f;
+    --color-text: #1F1F1F;
+    --color-card: #FAFAFA;
+    --color-background: #E4E2DC;
+    --color-accent: #B3A781;
+    --color-secondary: #5E646A;
+    --color-yellow: #B8AE8F; /* keeping for backwards compatibility */
     --line-thickness: 2pt;
 }
 
@@ -162,19 +167,8 @@ body {
     font-family: "Work Sans", sans-serif;
     font-weight: 400;
     font-style: normal;
-    /* fall back color */
-    background-color: #FFFFFF;
-    /* gold texture */
-    /* background-image: url('/gold-texture.svg');
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed; */
-    background-image: url('/grainy_paper.png');
-    background-blend-mode: multiply;
-    /* repeat*/ 
-    background-repeat: cover; 
-    background-size: cover;
+    color: var(--color-text);
+    background-color: var(--color-background);
 }
 
 /* White card for content */
@@ -182,7 +176,7 @@ body {
     max-width: 700px;
     margin: 4rem auto;
     padding: 3rem;
-    background: #FFFFFF;
+    background: var(--color-card);
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
   }
 
@@ -246,7 +240,7 @@ h3::after {
     flex: 1;
     margin-left: 1rem;
     height: var(--line-thickness);
-    background-color: black;
+    background-color: var(--color-text);
 }
 
 h2,
@@ -272,7 +266,7 @@ code {
 
 pre {
     margin: 0 0 24pt 0;
-    border: var(--line-thickness) solid black;
+    border: var(--line-thickness) solid var(--color-text);
     padding: 12pt;
     white-space: pre;
     overflow-x: auto;
@@ -308,7 +302,7 @@ blockquote {
 footer {
     margin: 48pt 0 24pt 0;
     font-style: italic;
-    color: #666;
+    color: var(--color-secondary);
 }
 
 a,
@@ -320,18 +314,18 @@ a:not([href*='//']),
 a:not([href*='//']):visited {
     text-decoration: none;
     background-color: transparent;
-    color: black;
+    color: var(--color-text);
     padding: 4pt;
     /* to keep the padding consistent for line breaks: */
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
     font-family: "Spectral", serif;
-    border: var(--line-thickness) solid var(--color-yellow);
+    border: var(--line-thickness) solid var(--color-accent);
 
     &:hover,
     &:active {
-        background-color: var(--color-yellow);
-        color: black;
+        background-color: var(--color-secondary);
+        color: var(--color-card);
     }
 }
 
@@ -340,19 +334,19 @@ a[href*='//']:visited {
     padding: 4pt 0;
     text-decoration-thickness: var(--line-thickness);
     text-underline-offset: 4pt;
-    text-decoration-color: var(--color-yellow);
+    text-decoration-color: var(--color-accent);
 
     &:hover,
     &:active {
         text-decoration: none;
-        color: black;
-        background-color: var(--color-yellow);
+        color: var(--color-card);
+        background-color: var(--color-secondary);
     }
 }
 
 img {
     width: 100%;
-    border: var(--line-thickness) solid black;
+    border: var(--line-thickness) solid var(--color-text);
 }
 
 .decision {
@@ -390,7 +384,7 @@ img {
 }
 
 .splitter {
-    color: var(--color-yellow);
+    color: var(--color-secondary);
     text-align: center;
     /* shrink font size to 12pt */
     font-size: 12pt;
