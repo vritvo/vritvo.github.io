@@ -1,6 +1,6 @@
 This favicon was generated using the following font:
 
-- Font Title: Cormorant Garamond
+- Font Title: Spectral
 - Font Author: undefined
-- Font Source: https://fonts.gstatic.com/s/cormorantgaramond/v20/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_v86GnPEi_s4Mfs.ttf
+- Font Source: https://fonts.gstatic.com/s/spectral/v14/rnCr-xNNww_2s0amA-M-mHnOSOuk.ttf
 - Font License: undefined)
