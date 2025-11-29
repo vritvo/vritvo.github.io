@@ -144,11 +144,11 @@
 }
 
 :root {
-    --color-text: #1F1F1F;
-    --color-card: #fafaf8;
-    --color-background: #F2F2EE;
+    --color-text: #262a2e; 
+    --color-card: #ffffff;
+    --color-background: ##EFEDE6;
     --color-accent: #b8ae8f;
-    --color-accent-line: #6D7564;
+    --color-accent-line: #b8b1a8;
     --color-hover: #b8ae8f;
     --line-thickness: 2pt;
 }
@@ -160,10 +160,8 @@ html {
 
 body {
     font-size: 12pt;
-    max-width: 45em;
-    margin: auto;
+    margin: 0;
     min-height: 100vh;
-    padding: 3em 1em;
     font-family: "Work Sans", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -171,14 +169,64 @@ body {
     background-color: var(--color-background);
 }
 
-/* White card for content */
-.main-card {
-    max-width: 700px;
-    margin: 4rem auto;
-    padding: 3rem;
-    background: var(--color-card);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-  }
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+.sidebar-nav {
+    position: sticky;
+    top: 0;
+    width: 200px;
+    height: 100vh;
+    padding: 0 2em 3em 2em;
+    padding-top: calc(2em + 72pt);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    flex-shrink: 0;
+    align-items: flex-start;
+}
+
+.sidebar-nav a {
+    display: block;
+    width: 100%;
+    max-width: 180px;
+    text-align: center;
+}
+
+.content-wrapper {
+    flex: 1;
+    padding: 2em 3em 2em 2em;
+    max-width: 42em;
+}
+
+main {
+    max-width: 38em;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .sidebar-nav {
+        position: static;
+        width: 100%;
+        height: auto;
+        padding: 2em;
+        flex-direction: row;
+        justify-content: center;
+        border-bottom: var(--line-thickness) solid var(--color-accent-line);
+    }
+    
+    .content-wrapper {
+        padding: 2em;
+    }
+}
 
 h1,
 h2,
@@ -192,9 +240,9 @@ h3 {
 
 h1 {
     font-size: 48pt;
-    line-height: 48ipt;
+    line-height: 1.1;
     margin: 64pt 0 36pt 0;
-    text-align: center;
+    text-align: left;
     font-weight: 300;
 }
 
@@ -206,18 +254,10 @@ h2 {
 }
 
 h3 {
-    font-size: 24pt;
-    line-height: 24pt;
-    margin: 48pt 0 24pt 0;
-    font-weight: 300;
-}
-
-h3::after {
-    content: '';
-    flex: 1;
-    margin-left: 1rem;
-    height: var(--line-thickness);
-    background-color: var(--color-accent-line);
+    font-size: 20pt;
+    line-height: 1.3;
+    margin: 36pt 0 18pt 0;
+    font-weight: 400;
 }
 
 h2,
@@ -328,7 +368,7 @@ img {
 
 .splitter {
     color: var(--color-accent-line);
-    text-align: center;
+    /* text-align: center; */
     /* shrink font size to 12pt */
     font-size: 12pt;
 }

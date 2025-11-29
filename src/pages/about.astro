@@ -4,7 +4,6 @@ import Navigation from "../components/navigation.astro";
 import Footer from "../components/footer.astro";
 const pageTitle = "About Me";
 import { Content } from './web_pages/about.md';
-import Splitter from "../components/splitter.astro";
 ---
 
 <html lang="en">
@@ -20,12 +19,15 @@ import Splitter from "../components/splitter.astro";
 		<title>{pageTitle}</title>
 	</head>
 	<body>
-		<Navigation />
-		<main class="main-card">
-			<h1>{pageTitle}</h1>
-			<Splitter />
-			<Content />
-		</main>
-		<Footer />
+		<div class="container">
+			<Navigation />
+			<div class="content-wrapper">
+				<main>
+					<h1>{pageTitle}</h1>
+					<Content />
+				</main>
+				<Footer />
+			</div>
+		</div>
 	</body>
 </html>
