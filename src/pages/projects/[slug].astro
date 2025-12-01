@@ -4,6 +4,9 @@ import Navigation from "../../components/navigation.astro";
 import Footer from "../../components/footer.astro";
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
+
+const base = import.meta.env.BASE_URL;
+
 export async function getStaticPaths() {
   const projects = await getCollection('projects');
   return projects.map((project: any) => ({
@@ -23,11 +26,11 @@ const { Content } = await project.render();
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <link rel="icon" type="image/x-icon" href="/favicon_io/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png" />
-        <link rel="manifest" href="/favicon_io/site.webmanifest" />
+        <link rel="icon" type="image/x-icon" href={`${base}/favicon_io/favicon.ico`} />
+        <link rel="icon" type="image/png" sizes="32x32" href={`${base}/favicon_io/favicon-32x32.png`} />
+        <link rel="icon" type="image/png" sizes="16x16" href={`${base}/favicon_io/favicon-16x16.png`} />
+        <link rel="apple-touch-icon" sizes="180x180" href={`${base}/favicon_io/apple-touch-icon.png`} />
+        <link rel="manifest" href={`${base}/favicon_io/site.webmanifest`} />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>{project.data.title}</title>
@@ -53,7 +56,7 @@ const { Content } = await project.render();
                     </div>
                     
                     {project.data.coverImage && (
-                        <div class="project-hero-image" style={`background-image: url('${project.data.coverImage}')`}></div>
+                        <div class="project-hero-image" style={`background-image: url('${base}/${project.data.coverImage}')`}></div>
                     )}
 
                     <div class="project-content">

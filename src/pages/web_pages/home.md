@@ -7,4 +7,4 @@
 
 I was a cognitive psychology / neuroscience researcher, and then moved into tech-for-good machine learning and data science. I'm now at the Recurse Center, building software and AI tools that let me combine technical work with the creative pursuits I love. 
 
-Learn more about my background on the [About Me](/about) page, or explore my programming [Projects](/projects).
+Learn more about my background on the [About Me](about/) page, or explore my programming [Projects](projects/).
