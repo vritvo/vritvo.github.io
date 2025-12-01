@@ -110,23 +110,6 @@
     font-display: block;
 }
 
-
-@font-face {
-    font-family: Cormorant Garamond;
-    src: url('../fonts/CormorantGaramond-VariableFont_wght.ttf');
-    font-weight: 300 700;
-    font-style: normal;
-    font-display: block;
-}
-
-@font-face {
-    font-family: Cormorant Garamond;
-    src: url('../fonts/CormorantGaramond-Italic-VariableFont_wght.ttf');
-    font-weight: 300 700;
-    font-style: italic;
-    font-display: block;
-}
-
 @font-face {
     font-family: Work Sans;
     src: url('../fonts/WorkSans-VariableFont_wght.ttf');
@@ -144,7 +127,7 @@
 }
 
 :root {
-    --color-text: #262a2e; 
+    --color-text: #262a2e;
     --color-card: #ffffff;
     --color-background: ##EFEDE6;
     --color-accent: #b8ae8f;
@@ -212,7 +195,7 @@ main {
     .container {
         flex-direction: column;
     }
-    
+
     .sidebar-nav {
         position: static;
         width: 100%;
@@ -222,7 +205,7 @@ main {
         justify-content: center;
         border-bottom: var(--line-thickness) solid var(--color-accent-line);
     }
-    
+
     .content-wrapper {
         padding: 2em;
     }
@@ -250,7 +233,7 @@ h2 {
     font-size: 36pt;
     line-height: 36pt;
     margin: 72pt 0 24pt 0;
-    font-weight:300;
+    font-weight: 300;
 }
 
 h3 {
@@ -263,6 +246,15 @@ h3 {
 h2,
 h3 {
     text-wrap: balance;
+}
+
+.subtitle {
+    font-size: 11pt;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    color: var(--color-accent-line);
+    margin: -24pt 0 36pt 0;
+    text-transform: lowercase;
 }
 
 p,

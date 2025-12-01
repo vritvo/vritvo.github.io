@@ -1,30 +1,193 @@
 ---
 import "../styles/globals.css";
-import Filter from "../components/filter.astro";
 const pageTitle = "Projects";
 import Navigation from "../components/navigation.astro";
 import Footer from "../components/footer.astro";
+import { getCollection } from "astro:content";
+
+// Get featured projects only
+const featuredProjects = (await getCollection("projects"))
+    .filter((project: any) => project.data.featured)
+    .sort((a: any, b: any) => (a.data.order || 0) - (b.data.order || 0));
 ---
 
 <html lang="en">
     <head>
         <meta charset="utf-8" />
         <link rel="icon" type="image/x-icon" href="/favicon_io/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon_io/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon_io/favicon-16x16.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/favicon_io/apple-touch-icon.png"
+        />
         <link rel="manifest" href="/favicon_io/site.webmanifest" />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>{pageTitle}</title>
     </head>
     <body>
-        <Navigation />
-        <main class="main-card"> 
-            <Filter />
-            <h1>{pageTitle}</h1>
-            <p>Explore my projects <a href="www.google.com"> here</a></p>
-        </main>
-        <Footer />
+        <div class="container">
+            <Navigation />
+            <div class="content-wrapper">
+                <main>
+                    <h1>{pageTitle}</h1>
+                    <p class="intro-text">
+                        See a selection of my programming projects below.
+                    </p>
+
+                    <div class="projects-grid">
+                        {
+                            featuredProjects.map((project: any) => (
+                                <a
+                                    href={`/projects/${project.slug}`}
+                                    class="project-card"
+                                >
+                                    <div
+                                        class="project-image"
+                                        style={`background-image: url('${project.data.coverImage}')`}
+                                    />
+                                    <div class="project-info">
+                                        <h3>{project.data.title}</h3>
+                                        <p>{project.data.description}</p>
+                                    </div>
+                                </a>
+                            ))
+                        }
+                    </div>
+
+                    <h2 class="smaller-projects-heading">
+                        Other Programming Projects
+                    </h2>
+                    <ul class="smaller-projects-list">
+                        <li class="smaller-project-item">
+                            <span class="project-title"
+                                >Preventing Behavioral Health Crises in Douglas
+                                and Johnson Counties, Kansas</span
+                            >
+                            <span class="project-description"
+                                >: Built at Data Science for Social Good at
+                                Carnegie Mellon.
+                            </span>
+                            <span class="project-links">
+                                <a
+                                    href="https://github.com/vritvo/dojo_mh_public"
+                                    >[github]</a
+                                >
+                            </span>
+                        </li>
+                    </ul>
+                </main>
+                <Footer />
+            </div>
+        </div>
     </body>
 </html>
+
+<style>
+    .intro-text {
+        margin-bottom: 2rem;
+        font-size: 1.1rem;
+    }
+
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .project-card {
+        text-decoration: none;
+        color: inherit;
+        border: 1px solid #d4cbb8;
+        border-radius: 4px;
+        overflow: hidden;
+        transition:
+            transform 0.2s,
+            box-shadow 0.2s;
+        background: white;
+    }
+
+    .project-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-image {
+        width: 100%;
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+        background-color: #f5f2ed;
+    }
+
+    .project-info {
+        padding: 1.5rem;
+    }
+
+    .project-info h3 {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+        font-size: 1.3rem;
+    }
+
+    .project-info p {
+        margin: 0;
+        color: #666;
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .smaller-projects-heading {
+        margin-top: 3rem;
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+    }
+
+    .smaller-projects-list {
+        list-style-type: disc;
+        padding-left: 1.5rem;
+        line-height: 1.8;
+    }
+
+    .smaller-project-item {
+        margin-bottom: 0.75rem;
+        font-size: 1rem;
+    }
+
+    .project-title {
+        font-weight: 600;
+    }
+
+    .project-description {
+        color: #666;
+        font-size: 0.95rem;
+    }
+
+    .project-links {
+        margin-left: 0.5rem;
+    }
+
+    .project-links a {
+        color: #2c5f8d;
+        text-decoration: none;
+        margin-left: 0.25rem;
+        font-size: 0.9rem;
+    }
+
+    .project-links a:hover {
+        text-decoration: underline;
+    }
+</style>
