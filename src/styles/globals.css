@@ -128,11 +128,9 @@
 
 :root {
     --color-text: #262a2e;
-    --color-card: #ffffff;
-    --color-background: ##EFEDE6;
-    --color-accent: #b8ae8f;
-    --color-accent-line: #b8b1a8;
-    --color-hover: #b8ae8f;
+    --color-background: #FFFFFF;
+    --accent-200: #c0b697;
+    --accent-500: #746b4e;
     --line-thickness: 2pt;
 }
 
@@ -143,6 +141,7 @@ html {
 
 body {
     font-size: 12pt;
+    line-height: 1.5;
     margin: 0;
     min-height: 100vh;
     font-family: "Work Sans", sans-serif;
@@ -203,7 +202,7 @@ main {
         padding: 2em;
         flex-direction: row;
         justify-content: center;
-        border-bottom: var(--line-thickness) solid var(--color-accent-line);
+        border-bottom: var(--line-thickness) solid var(--accent-500);
     }
 
     .content-wrapper {
@@ -238,7 +237,7 @@ h2 {
 
 h3 {
     font-size: 20pt;
-    line-height: 1.3;
+    line-height: 24pt;
     margin: 36pt 0 18pt 0;
     font-weight: 400;
 }
@@ -250,19 +249,18 @@ h3 {
 
 .subtitle {
     font-size: 11pt;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 0.05em;
-    color: var(--color-accent-line);
+    color: var(--accent-500);
     margin: -24pt 0 36pt 0;
     text-transform: lowercase;
 }
 
 p,
 li,
-h3,
 blockquote,
 div {
-    line-height: 24pt;
+    line-height: 1.5;
 }
 
 code {
@@ -310,8 +308,8 @@ blockquote {
 
 footer {
     margin: 48pt 0 24pt 0;
-    font-style: italic;
-    color: var(--color-accent-line);
+    /* font-style: italic; */
+    color: var(--accent-500);
 }
 
 a,
@@ -324,16 +322,16 @@ a:not([href*='//']):visited {
     text-decoration: none;
     background-color: transparent;
     color: var(--color-text);
-    padding: 4pt;
+    padding: 0pt 3pt 0pt 3pt;
     /* to keep the padding consistent for line breaks: */
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
     font-family: "Spectral", serif;
-    border: var(--line-thickness) solid var(--color-accent);
+    border: var(--line-thickness) solid var(--accent-200);
 
     &:hover,
     &:active {
-        background-color: var(--color-hover);
+        background-color: var(--accent-200);
         color: var(--color-text);
     }
 }
@@ -343,13 +341,24 @@ a[href*='//']:visited {
     padding: 4pt 0;
     text-decoration-thickness: var(--line-thickness);
     text-underline-offset: 4pt;
-    text-decoration-color: var(--color-accent);
+    text-decoration-color: var(--accent-200);
 
     &:hover,
     &:active {
         text-decoration: none;
         color: var(--color-text);
-        background-color: var(--color-hover);
+        background-color: var(--accent-200);
+    }
+}
+
+footer a[href*='//'],
+footer a[href*='//']:visited {
+    text-decoration-color: var(--accent-500);
+
+    &:hover,
+    &:active {
+        background-color: var(--accent-500);
+        color: var(--color-background);
     }
 }
 
@@ -359,8 +368,6 @@ img {
 }
 
 .splitter {
-    color: var(--color-accent-line);
-    /* text-align: center; */
-    /* shrink font size to 12pt */
+    color: var(--accent-500);
     font-size: 12pt;
 }
