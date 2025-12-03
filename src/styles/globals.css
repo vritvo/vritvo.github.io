@@ -126,6 +126,22 @@
     font-display: block;
 }
 
+@font-face {
+    font-family: Source Sans;
+    src: url('../fonts/SourceSans3-VariableFont_wght.ttf');
+    font-weight: 200 900;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: Source Sans;
+    src: url('../fonts/SourceSans3-Italic-VariableFont_wght.ttf');
+    font-weight: 200 900;
+    font-style: italic;
+    font-display: block;
+}
+
 :root {
     --color-text: #262a2e;
     --color-background: #FFFFFF;
@@ -144,8 +160,8 @@ body {
     line-height: 1.5;
     margin: 0;
     min-height: 100vh;
-    font-family: "Work Sans", sans-serif;
-    font-weight: 400;
+    font-family: "Source Sans", serif;
+    font-weight: 300;
     font-style: normal;
     color: var(--color-text);
     background-color: var(--color-background);
@@ -238,7 +254,7 @@ h2 {
 h3 {
     font-size: 20pt;
     line-height: 24pt;
-    margin: 36pt 0 18pt 0;
+    margin: 36pt 0 36pt 0;
     font-weight: 400;
 }
 
@@ -260,7 +276,7 @@ p,
 li,
 blockquote,
 div {
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 code {
@@ -326,7 +342,7 @@ a:not([href*='//']):visited {
     /* to keep the padding consistent for line breaks: */
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
-    font-family: "Spectral", serif;
+    font-family: "Source Sans", serif;
     border: var(--line-thickness) solid var(--accent-200);
 
     &:hover,
