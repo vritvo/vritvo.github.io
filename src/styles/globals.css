@@ -335,15 +335,42 @@ a:visited {
 
 a:not([href*='//']),
 a:not([href*='//']):visited {
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-thickness: var(--line-thickness);
+    text-underline-offset: 4pt;
+    text-decoration-color: var(--accent-500);
     background-color: transparent;
     color: var(--color-text);
+    font-family: "Source Sans", serif;
+
+    &:hover,
+    &:active {
+        background-color: var(--accent-500);
+        color: var(--color-background);
+    }
+}
+
+.sidebar-nav a,
+.sidebar-nav a:visited {
+    text-decoration: none;
     padding: 0pt 3pt 0pt 3pt;
-    /* to keep the padding consistent for line breaks: */
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
-    font-family: "Source Sans", serif;
     border: var(--line-thickness) solid var(--accent-200);
+
+    &:hover,
+    &:active {
+        background-color: var(--accent-200);
+        color: var(--color-text);
+    }
+}
+
+a.project-card,
+a.project-card:visited {
+    text-decoration: none;
+    border-color: var(--accent-200);
+    background-color: white;
+    color: var(--color-text);
 
     &:hover,
     &:active {
@@ -354,25 +381,13 @@ a:not([href*='//']):visited {
 
 a[href*='//'],
 a[href*='//']:visited {
-    padding: 4pt 0;
     text-decoration-thickness: var(--line-thickness);
     text-underline-offset: 4pt;
-    text-decoration-color: var(--accent-200);
-
-    &:hover,
-    &:active {
-        text-decoration: none;
-        color: var(--color-text);
-        background-color: var(--accent-200);
-    }
-}
-
-footer a[href*='//'],
-footer a[href*='//']:visited {
     text-decoration-color: var(--accent-500);
 
     &:hover,
     &:active {
+        text-decoration: none;
         background-color: var(--accent-500);
         color: var(--color-background);
     }
