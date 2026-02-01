@@ -1,10 +1,8 @@
 
-### Hello! Welcome to my site. 
+#### Hello! I'm a data scientist with a background in cognitive psychology and neuroscience, and I build software to explore and interpret complex systems. 
 
-### I explore how humans construct meaning — how we remember, how we make sense of information and data, and how we interpret the world around us. 
+I've worked in both research and industry, on problems involving data, human cognition, and interpretation — from machine learning systems to more exploratoryand creative software projects. A lot of that work has been in applied settings, including healthcare tech and public-interest work. 
 
-### I use whatever tools are the best for understanding that, from analysis and AI to psychology and writing.
-
-I was a cognitive psychology / neuroscience researcher, and then moved into tech-for-good machine learning and data science. I'm now at the Recurse Center, building software and AI tools that let me combine technical work with the creative pursuits I love. 
+The common thread across it all is an interest in how humans construct meaning: how we remember, how we interpret information, and how data shapes understanding. 
 
 Learn more [about me](/about/), or explore my [projects](/projects/).
