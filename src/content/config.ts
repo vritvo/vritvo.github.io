@@ -13,7 +13,18 @@ const projectsCollection = defineCollection({
   }),
 });
 
+
+// add a collection for blog posts with title, description, pub date.
+const blogCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    pubDate: z.coerce.date(), // YAML parses dates as Date; coerce so string or date both work
+  }),
+});
+
 export const collections = {
   projects: projectsCollection,
+  blog: blogCollection,
 };
-
