@@ -33,8 +33,8 @@ const blogPosts = (await getCollection("blog"))
                                 <li class="blog-list-item">
                                     <a href={`/blog/${post.slug}`} class="blog-list-link">
                                         <span class="blog-list-title">{post.data.title}</span>
-                                        <time class="blog-list-date" datetime={post.data.pubDate}>
-                                            {new Date(post.data.pubDate).toLocaleDateString("en-US", {
+                                        <time class="blog-list-date" datetime={post.data.pubDate.toISOString().split('T')[0]}>
+                                            {new Date(post.data.pubDate.toISOString().split('T')[0] + 'T12:00:00').toLocaleDateString("en-US", {
                                                 year: "numeric",
                                                 month: "short",
                                                 day: "numeric",
