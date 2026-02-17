@@ -82,14 +82,14 @@ const { Content } = await post.render();
     }
 
     .blog-post-content :global(figure) {
-        margin: 1.5rem auto;
-        max-width: fit-content;
+        margin: 1.5rem 0;
+        text-align: center;
     }
 
     .blog-post-content :global(figure img) {
         max-width: 100%;
         height: auto;
-        display: block;
+        display: inline-block;
         border: none; /* override globals.css img border */
     }
 
