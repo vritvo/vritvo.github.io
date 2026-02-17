@@ -294,6 +294,7 @@ code {
     font-style: normal;
     font-weight: 700;
     text-transform: none;
+    font-size: 0.9em; /* slightly smaller than surrounding text */
 }
 
 pre {
@@ -304,12 +305,14 @@ pre {
     overflow-x: auto;
     overflow-y: hidden;
     max-width: 100%;
+    font-size: 0.85rem; /* smaller than body (12pt ~= 1rem) */
+    line-height: 1.4;
 }
 
 pre code {
-    line-height: 12pt;
     font-weight: 300;
     font-variation-settings: "MONO" 1;
+    font-size: inherit; /* inherit from pre, don't override */
 }
 
 p,
