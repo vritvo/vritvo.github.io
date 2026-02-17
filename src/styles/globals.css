@@ -228,7 +228,8 @@ main {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
     font-weight: 700;
     font-style: normal;
     overflow-wrap: break-word;
@@ -245,21 +246,29 @@ h1 {
 }
 
 h2 {
-    font-size: 36pt;
-    line-height: 36pt;
-    margin: 72pt 0 24pt 0;
-    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 1.3;
+    margin: 2rem 0 1rem;
+    font-weight: 600;
 }
 
 h3 {
-    font-size: 20pt;
-    line-height: 24pt;
-    margin: 36pt 0 36pt 0;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin: 1.5rem 0 0.75rem;
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    margin: 1.25rem 0 0.5rem;
     font-weight: 400;
 }
 
 h2,
-h3 {
+h3,
+h4 {
     text-wrap: balance;
 }
 

@@ -73,18 +73,6 @@ const { Content } = await post.render();
         line-height: 1.7;
     }
 
-    .blog-post-content :global(h2) {
-        margin-top: 2rem;
-        margin-bottom: 1rem;
-        font-size: 1.5rem;
-    }
-
-    .blog-post-content :global(h3) {
-        margin-top: 1.5rem;
-        margin-bottom: 0.75rem;
-        font-size: 1.2rem;
-    }
-
     .blog-post-content :global(ul) {
         margin-left: 1.5rem;
     }
@@ -94,7 +82,8 @@ const { Content } = await post.render();
     }
 
     .blog-post-content :global(figure) {
-        margin: 1.5rem 0;
+        margin: 1.5rem auto;
+        max-width: fit-content;
     }
 
     .blog-post-content :global(figure img) {
