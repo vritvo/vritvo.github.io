@@ -41,8 +41,8 @@ const { Content } = await post.render();
                 <main>
                     <header class="blog-post-header">
                         <h1>{post.data.title}</h1>
-                        <time datetime={post.data.pubDate.toISOString()} class="blog-post-date">
-                            {new Date(post.data.pubDate).toLocaleDateString("en-US", {
+                        <time datetime={post.data.pubDate.toISOString().split('T')[0]} class="blog-post-date">
+                            {new Date(post.data.pubDate.toISOString().split('T')[0] + 'T12:00:00').toLocaleDateString("en-US", {
                                 year: "numeric",
                                 month: "long",
                                 day: "numeric",
@@ -95,7 +95,7 @@ const { Content } = await post.render();
 
     .blog-post-content :global(figcaption) {
         font-size: 0.9rem;
-        color: #666;
+        color: var(--accent-500); # and italics:
         margin-top: 0.5rem;
         text-align: center;
     }
