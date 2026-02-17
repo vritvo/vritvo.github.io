@@ -91,4 +91,22 @@ const { Content } = await post.render();
     .blog-post-content :global(li) {
         margin-bottom: 0.5rem;
     }
+
+    .blog-post-content :global(figure) {
+        margin: 1.5rem 0;
+    }
+
+    .blog-post-content :global(figure img) {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        border: none; /* override globals.css img border */
+    }
+
+    .blog-post-content :global(figcaption) {
+        font-size: 0.9rem;
+        color: #666;
+        margin-top: 0.5rem;
+        text-align: center;
+    }
 </style>
