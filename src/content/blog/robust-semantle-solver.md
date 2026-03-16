@@ -1,7 +1,7 @@
 ---
 title: "Solving Semantle With the Wrong Embeddings"
 description: "A robust solver for the game Semantle."
-pubDate: 2026-03-10
+pubDate: 2026-03-16
 ---
 
 In my last [post](https://victoriaritvo.com/blog/semantle-solver/), I wrote about a [solver](https://github.com/EthanJantz/semantle/) for [Semantle](https://semantle.com/) (the word game where guesses are scored based on semantic similarity to a hidden target word) that [Ethan Jantz](https://jantz.website/) and I built while at the [Recurse Center](https://www.recurse.com/).
