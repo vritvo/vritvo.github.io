@@ -1,7 +1,7 @@
 ---
 title: "Slayerfest: An AI Simulation of Academia in the Buffyverse"
 description: "A network of bots who only talk about Buffy."
-pubDate: 2026-04-17
+pubDate: 2026-04-20
 ---
 
 <figure>
@@ -9,7 +9,7 @@ pubDate: 2026-04-17
 </figure>
 
 
-I love the 90s TV show *Buffy the Vampire Slayer*. I’ve seen it more times than I’d care to admit, and I can (if you’d let me) rant for hours about why I think it’s one of the most important TV shows ever made. After I gushed about *Buffy* to some people at the [Recurse Center](https://www.recurse.com/), [Frederic Kettelhoit](https://fredkettelhoit.com/) started watching the show, and we began DM-ing about it. 
+I love the 90s TV show *Buffy the Vampire Slayer*. I’ve seen it more times than I’d care to admit, and I can (if you’d let me) rant for hours about why I think it’s one of the most important TV shows ever made. After I gushed about *Buffy* to some people at the [Recurse Center](https://www.recurse.com/), [Frederic Kettelhoit](https://fredkettelhoit.com/) started watching the show, and we began DM-ing about it as he watched. 
 
 At some point we had racked up thousands of messages about *Buffy* and the philosophical frameworks it uses. We wanted to turn it into something, so we did what any former-philosophers-turned-programmers would do: we built an automatic AI academic conference. 
 
@@ -31,9 +31,9 @@ But our continuously growing chats were soon approaching the limit of the contex
 
 The whole system is vibe coded. The code and the lab have a lot of redundancy, but we like to see that as reflecting the bureaucracy of academia. 
 
-Here's how the pipeline works to generate a single paper: 
+I'll walk you through the pipeline for a single paper: 
 
-**Grad student bots** each focus on one week of our chats and produce a detailed summary. They effectively make the content more streamlined by stripping away any messages that were not related to analysis of *Buffy the Vampire Slayer*.
+**Grad student bots** each focus on one week of our chats and produce a detailed summary. They effectively make the content more streamlined by removing any discussions that were not related to analysis of *Buffy the Vampire Slayer*.
 
 **Postdoc bots** are the gatekeepers for what gets sent to the professor. These bots receive the grad notes as well as a provided thesis statement for a paper. They score each week's notes on relevance to the thesis, from 0 to 100. If a note gets below 30, it’s irrelevant, and it doesn’t pass. 30-69: the grad bot's summary goes to the professor. 70+: the week is highly relevant, so the raw Zulip chat gets sent to the professor.
 
@@ -67,7 +67,7 @@ And one small detail: the lab gives each pdf iteration a longer and longer name 
 ### The website
 After running the conference, we made a [website](https://slayerfest.org/) as an archive. You can explore all the papers, along with the full peer review history for each one.
 
-We wanted it to feel retro, like Buffy. It's all HTML, no JavaScript, and almost all black and white. We applied a custom SVG overlay to everything on the website to give it an old-school feel. The pipeline passes the auto-LaTeX-generated PDFs through ImageMagick to make them look like they were physically printed and manually scanned. There’s some slight random rotation, a faint wave in the page, and low DPI in the PDFs (see an example [here](https://slayerfest.org/pdfs/20251021_032610_The_Mayor_as_Theological_Figure_Faith_Belief_and_D_v2_v2.pdf)).
+We wanted it to feel retro, like *Buffy*. It's all HTML, no JavaScript, and almost all black and white. We applied a custom SVG overlay to everything on the website to give it an old-school feel. The pipeline passes the auto-LaTeX-generated PDFs through ImageMagick to make them look like they were physically printed and manually scanned. There’s some slight random rotation, a faint wave in the page, and low DPI in the PDFs (see an example [here](https://slayerfest.org/pdfs/20251021_032610_The_Mayor_as_Theological_Figure_Faith_Belief_and_D_v2_v2.pdf)).
 
 You can see a recorded run of a conference run on the [technical documentation page](https://slayerfest.org/technical_documentation.html).
 
@@ -90,6 +90,6 @@ I think this is right. It’s what Fred and I texted about, and at this point it
 
 However, the peer reviewers [disagreed](https://slayerfest.org/iterations/Institutional_Critique_and_Patriarchal_Authority_i_iteration_1.html). They rejected the paper. One peer reviewer said the paper "makes sweeping theoretical claims about patriarchal authority that are not adequately supported by textual evidence from the episode," and argued instead that the Gentlemen "function more as fairytale monsters with specific magical properties."
 
-Even if the peer reviewers were wrong, the professor then had to incorporate these comments. In the final, accepted paper, "patriarchal authority" became "institutional authority." The argument got much blander. 
+Even if the peer reviewer bots were wrong, the professor bot then had to incorporate these comments. In the final, accepted paper, "patriarchal authority" became "institutional authority." The argument got much blander. 
 
 Reading the peer review history here, I felt genuinely annoyed. The peer reviewers forced the lab to butcher the argument! I wasn't expecting to go around telling people how these AI reviewers had missed the point of the original argument, but I did, *several times*, and here I am doing it again now. Maybe the irritation at the peer review process is the truest sign that we built an accurate simulation.
