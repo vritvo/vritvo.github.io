@@ -232,7 +232,7 @@ John has been better than me at actually traveling to see never-announced henges
 
 <figure>
   <img src="/blog/hengefinder/found_henges.png" style="max-width: 300px;"/>
-  <figcaption>Some henges John has witnessed using Hengefinder. Clockwise from top left: 1) A "Sauron henge" at UT Austin Tower, a Sauron Henge at Taipei 101 (one of the tallest buildings in the world), A sunset henge on W 24th by UT Auston, and John's dog Luke enjoying a neighborly henge on a walk.</figcaption>
+  <figcaption>Some henges John has witnessed using Hengefinder. Clockwise from top left: 1) A "Sauron henge" at UT Austin Tower, a Sauron Henge at Taipei 101 (one of the tallest buildings in the world), A sunset henge on W 24th by UT Austin, and John's dog Luke enjoying a neighborly henge on a walk.</figcaption>
 </figure>
 
 Henges are geometrically rare because the sun so rarely lines up. I think they feel even more rare because of how infrequently we find them. But these moments are happening *all the time*, all over the world, whether we watch them or not.
