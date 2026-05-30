@@ -26,4 +26,4 @@ The bots read our source conversation, draft potential papers, summarize weeks o
 ## The website
 We built an archive [website](https://slayerfest.org) for the conference (Slayer Fest '03), styled to feel like a slightly degraded academic site from the early 2000s. The automatically generated PDFs look intentionally over-scanned and misaligned; the pages have a faint typewriter texture; and the landing page flickers as the “bots break through.” You can browse the papers, their peer-review histories, and the full pipeline that produced each one.
 
-**For a deeper dive into the project, see the [blog post](/blog/slayerfest).**
+**For more details, see the [blog post](/blog/slayerfest).**

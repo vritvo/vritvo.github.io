@@ -9,6 +9,8 @@ order: 3
 ---
 
 ## About this project
+*Featured in [Popular Science](https://www.popsci.com/technology/how-to-find-henge-like-manhattanhenge/) and [Boing Boing](https://boingboing.net/2026/05/26/hengefinder-finds-streets-that-perfectly-frame-the-setting-sun.html).*
+
 
 **HengeFinder** is a tool for finding sunset alignments anywhere in the world.
 
@@ -21,3 +23,5 @@ There's also an educational page to explain how henges work, and why they happen
 ## How it works
 - It grabs street geometry from OpenStreetMap and figures out the street’s compass bearing.
 - It computes the sun’s position throughout the year and looks for moments when the sun’s azimuth matches that bearing.
+
+**For more details, see the [blog post](/blog/hengefinder).**
