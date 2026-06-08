@@ -51,7 +51,7 @@ const featuredProjects = (await getCollection("projects"))
                         {
                             featuredProjects.map((project: any) => (
                                 <a
-                                    href={`/projects/${project.slug}`}
+                                    href={`/projects/${project.id}`}
                                     class="project-card"
                                 >
                                     <div

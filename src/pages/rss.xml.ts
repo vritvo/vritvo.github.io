@@ -18,7 +18,7 @@ export async function GET(context: { site: string | undefined }) {
       title: post.data.title,
       pubDate: toRssDate(post.data.pubDate),
       description: post.data.description,
-      link: `/blog/${post.slug}/`,
+      link: `/blog/${post.id}/`,
     })),
   });
 }

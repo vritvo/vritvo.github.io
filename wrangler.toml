@@ -1,0 +1,16 @@
+name = "victoriaritvo"
+main = "@astrojs/cloudflare/entrypoints/server"
+compatibility_date = "2026-06-08"
+compatibility_flags = ["global_fetch_strictly_public"]
+
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+
+[observability]
+enabled = true
+
+# Secrets (RESEND_API_KEY, CONTACT_TO, CONTACT_FROM) are NOT defined here.
+# Locally they come from .dev.vars; in production set them with:
+#   npm run wrangler -- secret put <NAME>
+# See .dev.vars.example for the full list.

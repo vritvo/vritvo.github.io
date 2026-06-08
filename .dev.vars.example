@@ -1,0 +1,16 @@
+# Local Worker dev secrets. Copy this file to .dev.vars and fill in real values.
+# They are read at runtime via c.env in src/server/app.ts. .dev.vars is gitignored.
+#
+# In production, these are NOT in wrangler.toml — set each as a Worker secret:
+#   npm run wrangler -- secret put RESEND_API_KEY
+#   npm run wrangler -- secret put CONTACT_TO
+#   npm run wrangler -- secret put CONTACT_FROM
+
+# Resend API key (https://resend.com/api-keys)
+RESEND_API_KEY=re_your_key_here
+
+# Where contact form emails are delivered.
+CONTACT_TO=you@example.com
+
+# Verified Resend sender. Must be on a domain verified in Resend.
+CONTACT_FROM=Your Name <contact@yourdomain.com>
