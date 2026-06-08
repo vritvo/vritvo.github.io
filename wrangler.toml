@@ -3,6 +3,12 @@ main = "@astrojs/cloudflare/entrypoints/server"
 compatibility_date = "2026-06-08"
 compatibility_flags = ["global_fetch_strictly_public"]
 
+# Custom domain. `wrangler deploy` provisions the DNS record + SSL automatically.
+# Requires victoriaritvo.com to be a zone in this Cloudflare account.
+routes = [
+  { pattern = "victoriaritvo.com", custom_domain = true }
+]
+
 [assets]
 directory = "./dist"
 binding = "ASSETS"
