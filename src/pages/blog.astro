@@ -32,14 +32,14 @@ const blogPosts = (await getCollection("blog"))
             <Navigation />
             <div class="content-wrapper">
                 <main>
-                    <div class="blog-header">
-                        <h1>{pageTitle}</h1>
+                    <h1 class="blog-title">
+                        {pageTitle}
                         <a href="/rss.xml" class="rss-link" aria-label="RSS feed" title="RSS feed">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                 <path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1" />
                             </svg>
                         </a>
-                    </div>
+                    </h1>
                     <ul class="blog-list">
                         {
                             blogPosts.map((post: any) => (
@@ -67,26 +67,25 @@ const blogPosts = (await getCollection("blog"))
 </html>
 
 <style>
-    .blog-header {
+    .blog-title {
         display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
-        gap: 1rem;
-    }
-
-    .blog-header h1 {
-        margin-bottom: 36pt;
+        align-items: baseline;
+        gap: 0.35em;
     }
 
     .rss-link {
-        color: var(--accent-200);
+        color: var(--accent-500);
         text-decoration: none;
         line-height: 0;
-        margin-bottom: 40pt;
+    }
+
+    .rss-link svg {
+        width: 0.4em;
+        height: 0.4em;
     }
 
     .rss-link:hover {
-        color: var(--accent-500);
+        color: var(--accent-200);
         background: transparent;
     }
 
