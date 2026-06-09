@@ -6,23 +6,12 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "deploy": "astro build && wrangler deploy",
-    "wrangler": "wrangler",
-    "cf-typegen": "wrangler types"
+    "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^13.6.1",
-    "@astrojs/rss": "^4.0.18",
-    "astro": "^6.4.4",
-    "hono": "^4.12.24",
+    "@astrojs/rss": "^4.0.15",
+    "astro": "^5.15.8",
     "rehype-katex": "^7.0.1",
     "remark-math": "^6.0.0"
-  },
-  "devDependencies": {
-    "wrangler": "^4.98.0"
-  },
-  "overrides": {
-    "vite": "^7"
   }
 }

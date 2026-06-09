@@ -2,13 +2,13 @@
 import "../../styles/globals.css";
 import Navigation from "../../components/navigation.astro";
 import Footer from "../../components/footer.astro";
-import { getCollection, render } from 'astro:content';
+import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 
 export async function getStaticPaths() {
   const projects = await getCollection('projects');
-  return projects.map((project: CollectionEntry<'projects'>) => ({
-    params: { slug: project.id },
+  return projects.map((project: any) => ({
+    params: { slug: project.slug },
     props: { project },
   }));
 }
@@ -18,7 +18,7 @@ type Props = {
 };
 
 const { project } = Astro.props as Props;
-const { Content } = await render(project);
+const { Content } = await project.render();
 ---
 
 <html lang="en">

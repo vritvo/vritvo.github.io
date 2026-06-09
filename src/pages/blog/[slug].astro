@@ -2,13 +2,13 @@
 import "../../styles/globals.css";
 import Navigation from "../../components/navigation.astro";
 import Footer from "../../components/footer.astro";
-import { getCollection, render } from "astro:content";
+import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
   return posts.map((post: CollectionEntry<"blog">) => ({
-    params: { slug: post.id },
+    params: { slug: post.slug },
     props: { post },
   }));
 }
@@ -18,7 +18,7 @@ type Props = {
 };
 
 const { post } = Astro.props;
-const { Content } = await render(post);
+const { Content } = await post.render();
 ---
 
 <html lang="en">
@@ -95,8 +95,7 @@ const { Content } = await render(post);
 
     .blog-post-content :global(figcaption) {
         font-size: 0.9rem;
-        color: var(--accent-500);
-        font-style: italic;
+        color: var(--accent-500); # and italics:
         margin-top: 0.5rem;
         text-align: center;
     }
