@@ -4,6 +4,10 @@
 # domain here on purpose.
 name = "victoriaritvo-contact"
 main = "src/server/app.ts"
+# The account is provided at deploy time via the CLOUDFLARE_ACCOUNT_ID env var
+# (set as a GitHub secret in the deploy workflow; locally it comes from your
+# `wrangler login` session). Supplying it avoids the /memberships API lookup,
+# which a Workers-Scripts-only token can't read.
 compatibility_date = "2026-06-08"
 compatibility_flags = ["global_fetch_strictly_public"]
 
