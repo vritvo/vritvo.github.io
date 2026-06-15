@@ -1,0 +1,18 @@
+# Standalone Cloudflare Worker that serves ONLY the contact form API.
+# The site itself stays static on GitHub Pages — this Worker is a separate
+# deployment with its own *.workers.dev URL. No assets, no routes, no custom
+# domain here on purpose.
+name = "victoriaritvo-contact"
+main = "src/server/app.ts"
+compatibility_date = "2026-06-08"
+compatibility_flags = ["global_fetch_strictly_public"]
+
+[observability]
+enabled = true
+
+# Secrets (RESEND_API_KEY, CONTACT_TO, CONTACT_FROM) are NOT defined here.
+# Locally they come from .dev.vars; in production set them once with:
+#   npx wrangler secret put RESEND_API_KEY
+#   npx wrangler secret put CONTACT_TO
+#   npx wrangler secret put CONTACT_FROM
+# See .dev.vars.example for the full list.
