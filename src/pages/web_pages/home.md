@@ -5,4 +5,4 @@ I've worked across research and industry on problems involving data, human behav
 
 A common thread across my work is understanding how people make sense of complex information, and building tools and systems that help turn that understanding into decisions. 
 
-Learn more [about me](/about/), explore my [projects](/projects/), or [reach out](/contact/) if you're interested in working together.
+Learn more [about me](/about/), explore my [projects](/projects/), or [reach out](/work-with-me/) if you're interested in working together.

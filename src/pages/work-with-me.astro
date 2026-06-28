@@ -3,7 +3,8 @@ import "../styles/globals.css";
 import Navigation from "../components/navigation.astro";
 import Footer from "../components/footer.astro";
 import ContactForm from "../components/ContactForm.astro";
-const pageTitle = "Contact";
+const pageTitle = "Work with Me";
+import { Content } from "./web_pages/work-with-me.md";
 ---
 
 <html lang="en">
@@ -38,11 +39,25 @@ const pageTitle = "Contact";
 			<div class="content-wrapper">
 				<main>
 					<h1>{pageTitle}</h1>
-					<p>Use this form to send me a message.</p>
+					<Content />
 					<ContactForm />
 				</main>
 				<Footer />
 			</div>
 		</div>
+
+		<style>
+			:global(main ul) {
+				list-style: none;
+				padding-left: 1.25rem;
+				margin-top: 0.5rem;
+			}
+
+			:global(main ul li) {
+				margin-bottom: 1.35rem;
+				padding-left: 1.25rem;
+				border-left: var(--line-thickness) solid var(--accent-200);
+			}
+		</style>
 	</body>
 </html>

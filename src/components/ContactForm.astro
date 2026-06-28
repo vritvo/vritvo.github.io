@@ -1,0 +1,169 @@
+<form class="contact-form" id="contact-form" novalidate>
+	<label for="name">Name</label>
+	<input
+		id="name"
+		name="name"
+		type="text"
+		required
+		autocomplete="name"
+	/>
+
+	<label for="email">Email</label>
+	<input
+		id="email"
+		name="email"
+		type="email"
+		required
+		autocomplete="email"
+	/>
+
+	<label for="message">Message</label>
+	<textarea id="message" name="message" rows="6" required></textarea>
+
+	<!-- Honeypot: hidden from real users, catches bots. -->
+	<div class="contact-form-hp" aria-hidden="true">
+		<label for="company">Company</label>
+		<input
+			id="company"
+			name="company"
+			type="text"
+			tabindex="-1"
+			autocomplete="off"
+		/>
+	</div>
+
+	<button type="submit">Send message</button>
+	<p class="contact-form-status" role="status" aria-live="polite"></p>
+</form>
+
+<script>
+	// The contact API runs as a separate Cloudflare Worker (the site itself
+	// is static on GitHub Pages). After the first `npm run deploy:api`,
+	// wrangler prints the real URL — paste it here. For local testing point
+	// this at "http://localhost:8787".
+	const API_URL =
+		"https://victoriaritvo-contact.ritvo-v.workers.dev/api/contact";
+
+	const form = document.querySelector(
+		".contact-form",
+	) as HTMLFormElement;
+	const status = form.querySelector(
+		".contact-form-status",
+	) as HTMLParagraphElement;
+	const button = form.querySelector("button") as HTMLButtonElement;
+
+	form.addEventListener("submit", async (e) => {
+		e.preventDefault();
+		status.textContent = "";
+		status.classList.remove("error");
+
+		const data = Object.fromEntries(new FormData(form).entries());
+		button.disabled = true;
+		button.textContent = "Sending…";
+
+		try {
+			const res = await fetch(API_URL, {
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify(data),
+			});
+			const result = (await res.json().catch(() => ({}))) as {
+				ok?: boolean;
+				error?: string;
+			};
+
+			if (res.ok && result.ok) {
+				form.reset();
+				status.textContent = "Thanks! Your message has been sent.";
+			} else {
+				status.textContent =
+					result.error ?? "Something went wrong. Please try again.";
+				status.classList.add("error");
+			}
+		} catch {
+			status.textContent = "Network error. Please try again.";
+			status.classList.add("error");
+		} finally {
+			button.disabled = false;
+			button.textContent = "Send message";
+		}
+	});
+</script>
+
+<style>
+	.contact-form {
+		display: flex;
+		flex-direction: column;
+		gap: 0.4rem;
+		max-width: 38rem;
+		margin-top: 1.5rem;
+	}
+
+	.contact-form label {
+		font-weight: 600;
+		margin-top: 0.6rem;
+	}
+
+	.contact-form input,
+	.contact-form textarea {
+		font-family: inherit;
+		font-size: 1rem;
+		color: var(--color-text);
+		background-color: var(--color-background);
+		border: var(--line-thickness) solid var(--accent-200);
+		padding: 0.5rem 0.6rem;
+	}
+
+	.contact-form input:focus,
+	.contact-form textarea:focus {
+		outline: none;
+		border-color: var(--accent-500);
+	}
+
+	.contact-form textarea {
+		resize: vertical;
+	}
+
+	.contact-form button {
+		font-family: inherit;
+		font-size: 1rem;
+		margin-top: 1rem;
+		padding: 0.55rem 1.2rem;
+		align-self: flex-start;
+		cursor: pointer;
+		color: var(--color-text);
+		background-color: transparent;
+		border: var(--line-thickness) solid var(--color-text);
+		transition:
+			background-color 0.2s,
+			color 0.2s;
+	}
+
+	.contact-form button:hover:not(:disabled) {
+		background-color: var(--accent-500);
+		color: var(--color-background);
+		border-color: var(--accent-500);
+	}
+
+	.contact-form button:disabled {
+		cursor: default;
+		opacity: 0.6;
+	}
+
+	.contact-form-hp {
+		position: absolute;
+		left: -9999px;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+	}
+
+	.contact-form-status {
+		margin-top: 0.75rem;
+		min-height: 1.2em;
+	}
+
+	.contact-form-status.error {
+		color: #b3261e;
+	}
+</style>
