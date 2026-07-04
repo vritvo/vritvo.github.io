@@ -4,6 +4,7 @@ If you have a project or consulting work you think I'd be right for, I'd love to
 - **Workflow & systems design:** how work actually gets done, on both the technical and the human side
 - **Pipelines & analytics:** getting scattered or messy data into usable shape, and reporting that answers real questions
 - **Machine learning & prediction:** models to predict outcomes or surface patterns, with an answer on when ML does (or does not) help
+- **AI tools:** e.g., letting people search or ask questions across their own documents
 - **Measurement & evaluation:** understanding whether something actually worked
 
 My background is as a researcher and data scientist across academia, the public sector, and health tech. You can read more on my [About Me](/about/) page, or use the form below to get in touch.
