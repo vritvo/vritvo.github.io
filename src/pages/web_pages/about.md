@@ -1,4 +1,4 @@
-At heart, I’m someone who asks a lot of questions and loves following ideas wherever they lead. I’m happiest when I’m learning something new, building something that didn’t exist before, or trying to understand why we think or feel about things the way we do.
+At heart, I'm drawn to complicated things and the work of figuring out what they mean. That complicated thing could be a body of data, the brain, or a story. But through all of it, I want to take the messiness and understand how the pieces fit together to make something clear and sensical.
 
 I did my PhD in **Neuroscience and Psychology** at **[Princeton University](https://compmem.princeton.edu/)**, where I studied memory and learning. My research combined **behavioral experiments**, **fMRI studies**, and **biologically-plausible neural network models** to understand how people update their memories over time.
 
