@@ -99,4 +99,32 @@ const { Content } = await post.render();
         margin-top: 0.5rem;
         text-align: center;
     }
+
+    .blog-post-content :global(details) {
+        margin: 2rem 0;
+        border: var(--line-thickness) solid var(--accent-200);
+        padding: 0 1rem 1rem;
+    }
+
+    .blog-post-content :global(summary) {
+        cursor: pointer;
+        font-family: "Spectral", serif;
+        font-weight: 600;
+        font-size: 1.5rem;
+        padding: 1rem 0;
+        list-style: none;
+    }
+
+    .blog-post-content :global(summary::before) {
+        content: "▸ ";
+        color: var(--accent-500);
+    }
+
+    .blog-post-content :global(details[open] summary::before) {
+        content: "▾ ";
+    }
+
+    .blog-post-content :global(summary::-webkit-details-marker) {
+        display: none;
+    }
 </style>
