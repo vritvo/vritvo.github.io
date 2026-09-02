@@ -6,6 +6,9 @@ import rehypeKatex from 'rehype-katex';
 // https://astro.build/config
 export default defineConfig({
     site: 'https://victoriaritvo.com',
+    server: {
+        allowedHosts: ['.trycloudflare.com'],
+    },
     markdown: {
         remarkPlugins: [remarkMath],
         rehypePlugins: [rehypeKatex],
